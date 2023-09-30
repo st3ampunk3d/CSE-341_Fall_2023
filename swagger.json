@@ -25,26 +25,18 @@
         }
       }
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/owners/": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Owners"
+        ],
         "description": "",
         "produces": [
           "application/json"
         ],
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       },
@@ -93,7 +85,9 @@
         }
       },
       "put": {
-        "tags": [],
+        "tags": [
+          "Owners"
+        ],
         "description": "",
         "produces": [
           "application/json"
@@ -207,7 +201,9 @@
         }
       },
       "put": {
-        "tags": [],
+        "tags": [
+          "Dogs"
+        ],
         "description": "",
         "produces": [
           "application/json"

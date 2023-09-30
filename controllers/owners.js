@@ -3,7 +3,7 @@ const Owner = require('../models/owner')
 const opts = { runValidators: true }
 
 const getAll = async (req, res) => {
-    //#swagger.tags=['Owners]
+    //#swagger.tags=['Owners']
     const result = await Owner.find()
     res.setHeader('Content-Type', 'application/json')
     res.status(200).json(result)
@@ -36,7 +36,7 @@ const createOwner = async (req, res) => {
 }
 
 const updateOwner = async (req, res) => {
-    //#swagger.tags['Owners']
+    //#swagger.tags=['Owners']
     try {
         result = await Owner.findByIdAndUpdate(req.params.id, req.body, opts)
         res.setHeader('Content-Type', 'application/json')

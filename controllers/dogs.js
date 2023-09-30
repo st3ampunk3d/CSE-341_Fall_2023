@@ -36,7 +36,7 @@ const createDog = async (req, res) => {
 }
 
 const updateDog = async (req, res) => {
-    //#swagger.tags['Dogs']
+    //#swagger.tags=['Dogs']
     try {
         result = await Dog.findByIdAndUpdate(req.params.id, req.body, opts)
         res.setHeader('Content-Type', 'application/json')
