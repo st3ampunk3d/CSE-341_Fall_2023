@@ -45,6 +45,38 @@
           "Owners"
         ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "Joshua"
+                },
+                "lastName": {
+                  "example": "Beale"
+                },
+                "location": {
+                  "example": "Hyrum"
+                },
+                "email": {
+                  "example": "joshua@beale.net"
+                },
+                "phone": {
+                  "example": "123-456-7890"
+                },
+                "membershipDate": {
+                  "example": "2023-09-29" 
+                },
+                "favoriteColor": {
+                  "example": "grey"
+                }
+              }
+            }
+          }
+        ],
         "produces": [
           "application/json"
         ],
@@ -98,6 +130,36 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "Bobbie"
+                },
+                "lastName": {
+                  "example": "Beale"
+                },
+                "location": {
+                  "example": "Hyrum"
+                },
+                "email": {
+                  "example": "bobbie@beale.net"
+                },
+                "phone": {
+                  "example": "123-456-7890"
+                },
+                "membershipDate": {
+                  "example": "2023-09-30" 
+                },
+                "favoriteColor": {
+                  "example": "Pink"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -161,6 +223,29 @@
           "Dogs"
         ],
         "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "Nova"
+                },
+                "breed": {
+                  "example": "Labradore"
+                },
+                "color": {
+                  "example": "Black"
+                },
+                "birthday": {
+                  "example": "2019-05-08"
+                }
+              }
+            }
+          }
+        ],
         "produces": [
           "application/json"
         ],
@@ -214,6 +299,27 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "August"
+                },
+                "breed": {
+                  "example": "Corgi"
+                },
+                "color": {
+                  "example": "Black"
+                },
+                "birthday": {
+                  "example": "2019-09-05"
+                }
+              }
+            }
           }
         ],
         "responses": {

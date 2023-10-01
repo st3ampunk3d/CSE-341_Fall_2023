@@ -23,7 +23,12 @@ const getSingle = async (req, res) => {
 
 const createDog = async (req, res) => {
     //#swagger.tags=['Dogs']
-    const result = new Dog(req.body)
+    const result = new Dog({
+        name: req.body.name,
+        breed: req.body.breed,
+        color: req.body.color,
+        birthday: req.body.birthday
+    })
 
     try {
         await result.save()
