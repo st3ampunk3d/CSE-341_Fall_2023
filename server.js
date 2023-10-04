@@ -8,7 +8,7 @@ const session = require('express-session')
 require('./db/passport')(passport)
 
 const port = process.env.port || 8080
-const message = 'Joshua Beale | CSE 341 - Week 3 | Project 2 (Pt 1)<br/><br/>'
+const message = 'Joshua Beale | CSE 341 - Week 4 | Project 2 (Pt 2)<br/><br/>'
 
 app
     .use(bodyParser.json())
@@ -32,7 +32,7 @@ app
     .use('/', require('./routes'));
 
 app.get('/', (req, res) => {
-    res.send(req.session.user !== undefined ? `${message}<span style="color:green;">Logged in as ${req.session.user.displayName}</span>` : `${message}<span style="color:red;">Logged Out</span>`)
+    res.send(req.session.user !== undefined ? `${message}<span style="color:green;">Logged in as ${req.session.user.userName}</span>` : `${message}<span style="color:red;">Logged Out</span>`)
 })
 app.get('/github/callback', passport.authenticate('github', {
     failureRedirect: '/api-docs', session: false}),

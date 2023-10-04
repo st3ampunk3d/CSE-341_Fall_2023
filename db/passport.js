@@ -16,8 +16,8 @@ module.exports = function(passport) {
         try {
             let user = await User.findOne({githubID: profile.id})
             if(user) {
-                done(null, user)
                 console.log(`User, ${profile.displayName}, already exists`)
+                done(null, user)
             } else {
                 user = await User.create(newUser)
                 console.log(`New user created: ${newUser}`)
